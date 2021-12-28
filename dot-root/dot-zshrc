@@ -5,6 +5,12 @@ function __setup_apple() {
     system_platform="apple"
     ZSH_THEME="apple"
     export CPPUTEST_HOME="/usr/local/Cellar/cpputest/4.0/"
+
+    # Apple's libmalloc nano_malloc likes to complain for no reason when 
+    # doing ASAN stuff - This will suppress the 
+    #   "malloc: nano zone abandoned due to inability to preallocate reserved vm space" 
+    # message
+    export MallocNanoZone=0
 }
 
 function __setup_linux() {
