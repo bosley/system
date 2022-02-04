@@ -37,8 +37,6 @@ function __setup_system() {
   else
       echo '<Warning> : Unknown OS'
   fi
-
-  echo "System: ${system_platform}"
 }
 
 __setup_system
