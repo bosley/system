@@ -8,7 +8,7 @@ echo "Installing brew"
 echo "Installing goodies"
 
 # Install goodies
-brew install git zsh htop python3 neovim tmux tree
+brew install git zsh htop python3 neovim tmux tree cpputest
 
 echo "Installing oh my zsh"
 
