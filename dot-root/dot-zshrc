@@ -1,6 +1,9 @@
 # System information
 system_platform="unknown"
 
+alias vi="nvim"
+alias gdiff="git diff --compact-summary"
+
 function __setup_apple() {
     system_platform="apple"
     ZSH_THEME="apple"
@@ -11,6 +14,8 @@ function __setup_apple() {
     #   "malloc: nano zone abandoned due to inability to preallocate reserved vm space" 
     # message
     export MallocNanoZone=0
+
+    export LIBCARBON_HOME="/usr/local/"
 }
 
 function __setup_linux() {
