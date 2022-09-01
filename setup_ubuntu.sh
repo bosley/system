@@ -3,7 +3,7 @@ cwd=$(pwd)
 echo "Installing goodies"
 
 # Install goodies
-sudo apt install -y git zsh htop python3 neovim tmux tree cpputest pkg-config cmake cmake-curses-gui 
+sudo apt install -y git zsh htop python3 neovim tmux tree cpputest pkg-config cmake cmake-curses-gui build-essential
 
 echo "Installing oh my zsh"
 
