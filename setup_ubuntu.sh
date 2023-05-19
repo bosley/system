@@ -5,8 +5,9 @@ echo "Installing goodies"
 # Install goodies
 sudo apt install -y git zsh btop guake python3 neovim tmux tree cpputest pkg-config \
 	cmake cmake-curses-gui build-essential valgrind gdb clang-format cbonsai openvpn-systemd-resolved kitty \
-	ninja meson picocom rofi i3blocks i3lock i3lock-fancy i3pystatus i3status nitrogen
+	meson picom rofi i3blocks i3lock i3lock-fancy i3pystatus i3status nitrogen
 
+# Note - need to install i3-wm 4.22 for configs to work
 
 echo "Installing oh my zsh"
 
