@@ -1,24 +1,25 @@
-set smarttab
-set expandtab   
-set tabstop=2    
-set softtabstop=2    
-set shiftwidth=2    
-set smartindent    
-set cinoptions+=g0,:0,N-s    
-set backspace=indent,eol,start    
-set incsearch    
-set cursorline    
-set splitright    
-set ttimeoutlen=0    
-set number    
-hi LineNr ctermfg=Grey    
-hi CursorLineNr ctermfg=DarkGrey    
-hi LineNr ctermbg=None    
-hi CursorLineNr ctermbg=White    
-syntax on    
-filetype indent on    
-set laststatus=2    
-hi Folded ctermbg=None    
-hi Folded ctermfg=Magenta    
-map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>    
-map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+set encoding=utf-8
+set nu
+set fileencodings=utf-8
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set splitright
+set syntax=on
+
+"<Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+au BufRead,BufNewFile *.nibi set filetype=nibi
+au Syntax nibi runtime! syntax/nibi.vim
+
+call plug#begin("/home/bosley/.config/nvim/plugged")
+
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+
+call plug#end()
+
+lua require("init")
+
