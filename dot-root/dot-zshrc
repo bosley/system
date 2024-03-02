@@ -30,10 +30,6 @@ function __setup_system() {
   export ZSH="${HOME}/.oh-my-zsh"
   plugins=(git)
 
-  # Alias
-  #
-  alias vi="nvim"
-
   # System specific things
   if [[ `uname` == "Linux" ]]; then
     __setup_linux
